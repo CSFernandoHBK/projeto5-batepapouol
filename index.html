@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <title>Chat UOL</title>
 </head>
 <body>
-    
+    <div class="entrada-sala oculto">
+        <img src="logo.png">
+        <input type="text">
+        <button onclick="abrirchat()">Entrar</button>
+    </div>
+    <div class="chat">
+        <div class="barra-superior">
+            <img src="logo.png">
+            <ion-icon name="people" onclick="abrirMenuLateral()"></ion-icon>
+        </div>
+        <div class="area-mensagens">
+            <ul class="ul-msg">
+            </ul>
+        </div>
+        <div class="barra-inferior">
+            <input type="text">
+            <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+        </div>
+    </div>
+    <div class="fundo-opaco oculto">
+        <div class="barra-lateral oculto">
+            caixas
+        </div>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

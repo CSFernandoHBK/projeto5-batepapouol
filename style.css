@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: #E5E5E5;
+}
+.oculto{
+    opacity: 0;
+}
+.barra-superior{
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+}
+
+.barra-superior ion-icon{
+    height: 45px;
+    width: 45px;
+}
+.barra-inferior{
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0px;
+    padding: 25px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.barra-inferior ion-icon{
+    height: 25px;
+    width: 25px;
+}
+.barra-inferior input{
+    height: 30px;
+    width: 88%;
+}
+.barra-lateral{
+    width: 259px;
+    height: 100%;
+    background: blue;
+    z-index: 3;
+}
+.area-mensagens{
+    margin-top: 106px;
+    margin-bottom: 80px;
+}
+.msg-status{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #DCDCDC;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-family: "Roboto", sans-serif;
+}
+.msg-normal{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+.msg-reservada{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #ffdede;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+.entrada-sala{
+    background-color: blue;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.hora{
+    color: #AAAAAA;
+    font-weight: normal;
+}
+/*b{
+    margin-left: 4px;
+    margin-right: 3px;
+}*/
