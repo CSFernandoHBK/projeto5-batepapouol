@@ -13,6 +13,13 @@ const objNome = {name: nome};
 //entrada na sala
 function entradaSala(){
     const promessa = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants',objNome);
+    promessa.catch(tratarErroNome);
+}
+
+//tratar erro de entrada
+function tratarErroNome(){
+    alert("Nome inválido! Por favor, insira outro nome");
+    window.location.reload();
 }
 
 entradaSala();
@@ -24,6 +31,12 @@ function manterConexao(){
 
 setInterval(manterConexao, 5000);
 
+//tratar erro geral
+function tratarErroGeral(){
+    alert("Erro! Favor, recarregue a página!");
+    window.location.reload();
+}
+
 //array de objetos mensagens
 let mensagensRecebidas = [];
 
@@ -31,19 +44,16 @@ let mensagensRecebidas = [];
 function receberMensagens(){
     const promessa = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
     promessa.then(processarMensagensRecebidas);
+    promessa.catch(tratarErroGeral);
 }
 
 function processarMensagensRecebidas(resposta) {
+    limparMensagens();
 	mensagensRecebidas = resposta.data;
     renderizarMensagens(mensagensRecebidas);
 }
 
-function atualizarMsg(){
-    limparMensagens();
-    receberMensagens();
-}
-
-setInterval(atualizarMsg, 3000)
+setInterval(receberMensagens, 3000)
 
 //construção da mensagem no padrão chat - utilizada dentro de renderizarMensagens 
 function construirMensagem(i){
@@ -100,5 +110,13 @@ function enviarMensagem(){
         type: "message"
     }
     const promessa = axios.post('https://mock-api.driven.com.br/api/v6/uol/messages',objMsg);
+    promessa.catch(tratarErroGeral);
     document.querySelector(".texto-mensagem").value = "";
+}
+
+//abrir menu lateral
+function abrirMenu(){
+    let aba = document.querySelector(".lateral-geral")
+    aba.classList.toggle("escondido");
+    aba.classList.toggle("emcima");
 }

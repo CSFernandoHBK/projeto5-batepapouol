@@ -17,15 +17,15 @@
     <title>Chat UOL</title>
 </head>
 <body>
-    <div class="entrada-sala oculto">
+    <!--<div class="entrada-sala oculto">
         <img src="logo.png">
         <input type="text">
         <button onclick="abrirchat()">Entrar</button>
-    </div>
+    </div>-->
     <div class="chat">
         <div class="barra-superior">
             <img src="logo.png">
-            <ion-icon name="people" onclick="abrirMenuLateral()"></ion-icon>
+            <ion-icon name="people" onclick="abrirMenu()"></ion-icon>
         </div>
         <div class="area-mensagens">
             <ul class="ul-msg">
@@ -36,10 +36,43 @@
             <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
         </div>
     </div>
-    <div class="fundo-opaco oculto">
-        <div class="barra-lateral oculto">
-            caixas
-        </div>    
+    <div class="lateral-geral escondido">
+        <div class="menu-barra-lateral" onclick="abrirMenu()">
+            <div class="barra-lateral">
+                <p>Escolha um contato para<br>enviar mensagem:</p>
+                <div class="item-lista-contatos">
+                    <ion-icon name="people"></ion-icon>
+                    <span>Todos</span>
+                </div>
+                <ul class="lista-contatos">
+                    <li class="item-lista-contatos">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <span>Nome da pessoa</span>
+                    </li>
+                    <li class="item-lista-contatos">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>Nome da pessoa</span>
+                    </li>
+                    <li class="item-lista-contatos">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>Nome da pessoa</span>
+                    </li>
+                    <li class="item-lista-contatos">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>Nome da pessoa</span>
+                    </li>
+                </ul>
+                <p>Escolha a visibilidade:</p>
+                <div class="item-lista-contatos">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <span>Público</span>
+                </div>
+                <div class="item-lista-contatos">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <span>Reservadamente</span>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
