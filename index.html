@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
     <title>Chat UOL</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
             </ul>
         </div>
         <div class="barra-inferior">
-            <input type="text">
+            <input type="text" class="texto-mensagem">
             <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
         </div>
     </div>
@@ -40,7 +42,6 @@
         </div>    
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,33 +1,14 @@
-Criar estilo para:
-    mensagem normal
-    mensagem reservada
-    alerta entrada e saida
+-- Receber mensagem do servidor
+-- Montar mensagem no modelo do chat
+-- Renderizar a mensagem
+-- Apagar as mensagens anteriores
+-- Renderizar as novas mensagens
 
+--Entrar na sala
+--Manter conexão
+--Receber mensagens
+--Enviar mensagens
+--Resetar a barra de mensagem ao enviar mensagem
 
-A mensagem vai ser um objeto com
-    hora
-    pessoa
-    tipo de mensagem
-    mensagem
-
-
-    {from:"João",
-    to:"Todos",
-    text: "entra na sala...",
-    type: "status",
-    time: "08:01:17"},
-    {from: "Maria",
-    to: "Todos",
-    text: "Bom dia",
-    type: "message",
-    time: "08:02:50"},
-    {from:"Carlos",
-    to:"Maria",
-    text: "Olá gatinha",
-    type: "private_message",
-    time: "08:01:17"},
-    {from:"Carlos",
-    to:"Todos",
-    text: "entra na sala...",
-    type: "message",
-    time: "08:01:17"}
+Manter scroll embaixo
+Atualizar as mensagens sem "piscar a tela"

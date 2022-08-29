@@ -55,6 +55,7 @@ body{
 .area-mensagens{
     margin-top: 106px;
     margin-bottom: 80px;
+    overflow-y: scroll;
 }
 .msg-status{
     font-family: "Roboto", sans-serif;
@@ -80,6 +81,8 @@ body{
     display: flex;
     align-items: center;
     padding: 8px;
+    max-height: 100px;
+    overflow-y: hidden;
 }
 .msg-reservada{
     font-family: "Roboto", sans-serif;
@@ -92,6 +95,8 @@ body{
     display: flex;
     align-items: center;
     padding: 8px;
+    max-height: 100px;
+    overflow-y: hidden;
 }
 .entrada-sala{
     background-color: blue;
@@ -107,7 +112,8 @@ body{
     color: #AAAAAA;
     font-weight: normal;
 }
-/*b{
+b{
     margin-left: 4px;
     margin-right: 3px;
-}*/
+}
+
